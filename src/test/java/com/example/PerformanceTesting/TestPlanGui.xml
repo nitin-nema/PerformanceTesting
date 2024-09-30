@@ -1,0 +1,21 @@
+<TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Performance Test Plan" enabled="true">
+    <stringProp name="TestPlan.comments">Test plan for performance testing a REST API</stringProp>
+    <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+        <boolProp name="LoopController.continue_forever">false</boolProp>
+        <stringProp name="LoopController.loops">1</stringProp>
+    </elementProp>
+    <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="User Load" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">60</stringProp>
+        <stringProp name="ThreadGroup.sampler_count">1</stringProp>
+    </ThreadGroup>
+    <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API Request" enabled="true">
+        <stringProp name="HTTPSampler.domain">api.example.com</stringProp>
+        <stringProp name="HTTPSampler.path">/data</stringProp>
+        <stringProp name="HTTPSampler.method">GET</stringProp>
+        <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+    </HTTPSamplerProxy>
+    <ResultCollector guiclass="ViewResultsTreeGui" testclass="ResultCollector" testname="View Results Tree" enabled="true" />
+    <ResultCollector guiclass="AggregateReportGui" testclass="ResultCollector" testname="Aggregate Report" enabled="true" />
+</TestPlan>

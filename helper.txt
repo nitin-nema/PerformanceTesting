@@ -1,0 +1,66 @@
+efficency
+stablity
+responsiveness
+_____
+-Repsonse time -- time 
+  -user experience 
+  -measures in ms
+  - indexing, reducing i/o operation or caching mechanism
+  - fine tune the jvm and garbage collection setting
+Throughput-- 
+ -request and transaction in given period
+ - seconds or minute
+ - RPS or TPS
+ -load balancing to distribute traffic across multiple server
+ - thread managment and database connection pooling
+ - asyncronous processing where possible
+ 
+scalabllity--
+
+-CPU and memory utlization--
+	CPU utlization- percentage of CPU time used for processing task
+	Memory utlization- RAM(heap and non-heap)
+	-Heap
+	--Young Generation(Eden Space, Surviour space(S0,S1))
+	--Old Generation(Tenured Generation)
+	--Permanent Generation(Metaspace-- PermGen)
+	
+	-Non-Heap
+	- Metaspace, code cache, thread stack
+	 - during execution
+	 
+	 Class<?> cls = Class.forName('com.example.MyClass');
+	 - Visual VM, Java Mission Control, Prometheus
+
+-Garabage Collection Overhead--
+ - Phases-
+     1. Mark - identify the reachable
+	 2. Sweep phase 
+	 3. Compact phase(serial GC)(!cms gc)(digfferent technique G1, GC and ZGC) (java 12+  Shenandoah)
+	 
+Types of Performance testing
+- Load testing
+-Stress testing
+- Endurance testing
+-Spike testing
+-Scalablity testing(response time and resource utilization).
+
+________
+JMeter application -
+https://jmeter.apache.org/download_jmeter.cgi
+
+Step 1:Test plan -> Add -> Thread (user) -> Thread Group
+user -100
+Ramp- up period -10users per sec
+loop count - 10
+step 2:  add http request
+-www. amazon.com port 80 
+-path - /api/product/testproduct
+
+step3: Listenr --Thread Group -> add-> listner -> View Result/Summary report
+step4: start button(green colored)
+
+command - jmeter -n -t test_plan.jmx -l result.jtl -e -o /path/to/output/folder
+
+_____
+

@@ -1,0 +1,10 @@
+<HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API Request" enabled="true">
+    <stringProp name="HTTPSampler.domain">api.example.com</stringProp>
+    <stringProp name="HTTPSampler.path">/data</stringProp>
+    <stringProp name="HTTPSampler.method">GET</stringProp>
+    <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+</HTTPSamplerProxy>
+
+<PrometheusListener guiclass="PrometheusListenerGui" testclass="PrometheusListener" testname="Prometheus Listener" enabled="true">
+<stringProp name="prometheus.metrics.path">/metrics</stringProp>
+</PrometheusListener>

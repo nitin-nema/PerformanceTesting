@@ -1,0 +1,4 @@
+for JMH
+mvn clean install
+
+java -jar target/PerformanceTesting-0.0.1-SNAPSHOT

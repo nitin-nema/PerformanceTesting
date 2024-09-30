@@ -1,0 +1,11 @@
+<CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Product Name Data" enabled="true">
+    <stringProp name="filename">/path/to/product_names.csv</stringProp>
+    <stringProp name="fileEncoding"></stringProp>
+    <boolProp name="ignoreFirstLine">false</boolProp>
+    <stringProp name="delimiter">,</stringProp>
+    <stringProp name="variableNames">product_name</stringProp>
+    <boolProp name="quotedData">false</boolProp>
+    <boolProp name="recycle">true</boolProp>
+    <boolProp name="stopThread">false</boolProp>
+    <boolProp name="shareMode">shareMode.all</boolProp>
+</CSVDataSet>

@@ -1,0 +1,22 @@
+<HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Product Search" enabled="true">
+    <stringProp name="HTTPSampler.domain">ecommerce-api.com</stringProp>
+    <stringProp name="HTTPSampler.port">80</stringProp>
+    <stringProp name="HTTPSampler.protocol">http</stringProp>
+    <stringProp name="HTTPSampler.path">/api/products/search</stringProp>
+    <stringProp name="HTTPSampler.method">GET</stringProp>
+    <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+    <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+    <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+    <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+    <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+        <collectionProp name="Arguments.arguments">
+            <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${product_name}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">query</stringProp>
+            </elementProp>
+        </collectionProp>
+    </elementProp>
+</HTTPSamplerProxy>

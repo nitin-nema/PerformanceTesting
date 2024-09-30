@@ -1,0 +1,12 @@
+<dependencies>
+    <dependency>
+        <groupId>io.gatling</groupId>
+        <artifactId>gatling-core</artifactId>
+        <version>3.7.5</version>
+    </dependency>
+    <dependency>
+        <groupId>io.gatling</groupId>
+        <artifactId>gatling-http</artifactId>
+        <version>3.7.5</version>
+    </dependency>
+</dependencies>
